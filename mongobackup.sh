@@ -19,7 +19,7 @@ if [[ ! -d $BACKUP_PATH ]]; then
     chmod 700 $BACKUP_PATH
 fi
 
-mongodump --host=$HOST --username=$USERNAME --password=$PASSWORD --db=$DATABASE --authenticationDatabase=$AUTHENTICATION_DATABASE --out="${BACKUP_PATH}/$(date '+%d%b%Y')/"
+mongodump --host=$HOST --username=$USERNAME --password=$PASSWORD --db=$DATABASE --authenticationDatabase=$AUTHENTICATION_DATABASE --gzip --out="${BACKUP_PATH}/$(date '+%d%b%Y')/"
 
 OLD_BACKUP="${BACKUP_PATH}/$(date --date="$RETAIN_DAYS days ago" '+%d%b%Y')"
 
