@@ -4,11 +4,11 @@ BACKUP_PATH='/root/mongobackup'
 
 HOST='127.0.0.1:27017'
 
-USERNAME=''
+USERNAME='username'
 
-PASSWORD=''
+PASSWORD='password'
 
-DATABASE=''
+DATABASE='database'
 
 AUTHENTICATION_DATABASE='admin'
 
